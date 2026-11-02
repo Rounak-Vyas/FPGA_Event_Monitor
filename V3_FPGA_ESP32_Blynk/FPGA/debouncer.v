@@ -1,4 +1,3 @@
-    
 module debouncer #(
     parameter integer CLK_FREQ_HZ = 100_000_000,
     parameter integer DEBOUNCE_MS = 10

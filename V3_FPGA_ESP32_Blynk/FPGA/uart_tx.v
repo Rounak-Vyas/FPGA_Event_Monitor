@@ -1,4 +1,3 @@
-
 module uart_tx #(
     parameter integer CLK_FREQ  = 100_000_000,
     parameter integer BAUD_RATE = 9600
@@ -33,7 +32,7 @@ module uart_tx #(
                     data_reg   <= data;
                     bit_index  <= 0;
                     busy       <= 1'b1;
-                    tx         <= 1'b0; // Start bit
+                    tx         <= 1'b0;
                 end
             end else begin
                 if (baud_count == DIVISOR - 1) begin
@@ -44,7 +43,7 @@ module uart_tx #(
                         data_reg  <= {1'b0, data_reg[7:1]};
                         bit_index <= bit_index + 1'b1;
                     end else if (bit_index == 8) begin
-                        tx        <= 1'b1; // Stop bit
+                        tx        <= 1'b1;
                         bit_index <= bit_index + 1'b1;
                     end else begin
                         tx   <= 1'b1;
