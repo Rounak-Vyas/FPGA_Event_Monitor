@@ -1,6 +1,6 @@
-#define BLYNK_TEMPLATE_ID   "TMPL3c8MgQJyr"
-#define BLYNK_TEMPLATE_NAME "FPGA Event Monitor"
-#define BLYNK_AUTH_TOKEN    "a6iaWGD6gstzLY3-1j_QkSi5IoLQdeOw"
+#define BLYNK_TEMPLATE_ID   ""
+#define BLYNK_TEMPLATE_NAME ""
+#define BLYNK_AUTH_TOKEN    ""
 
 #include <WiFi.h>
 #include <BlynkSimpleEsp32.h>
@@ -10,9 +10,9 @@
 #define FPGA_RX_PIN 4
 #define FPGA_TX_PIN 5
 
-
-char ssid[] = "Redmi 12 5G";
-char pass[] = "rounakvyas7";
+// WiFi Name and Password 
+char ssid[] = "";
+char pass[] = "";
 
 BlynkTimer timer;
 
